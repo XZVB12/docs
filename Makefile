@@ -18,11 +18,12 @@ tar:
 	docker save $(ORG)/$(NAME):$(VERSION) -o $(NAME).tar
 
 test:
-	docker --init run --rm -p 80:80 $(ORG)/$(NAME):$(VERSION)
-	# docker-compose -f ./docker-compose.ci.yml up -d
+	@docker run --init -d -p 80:80 $(ORG)/$(NAME):$(VERSION)
+	@open http://127.0.0.1
 
-web:
+dev:
 	@hugo server --theme=hugo-material-docs --buildDrafts
+	@open http://127.0.0.1:1313
 
 circle:
 	http https://circleci.com/api/v1.1/project/github/${REPO} | jq '.[0].build_num' > .circleci/build_num
@@ -34,4 +35,4 @@ clean:
 	docker rmi $(ORG)/$(NAME)
 	docker rmi $(ORG)/$(NAME):$(VERSION)
 
-.PHONY: build size tags test clean circle web
+.PHONY: build size tags test clean circle dev
