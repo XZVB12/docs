@@ -1,0 +1,2 @@
+# docs
+Malice Documentation
