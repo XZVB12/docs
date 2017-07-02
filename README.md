@@ -6,3 +6,5 @@ docs
 [![Docker Image](https://img.shields.io/badge/docker%20image-17.9MB-blue.svg)](https://hub.docker.com/r/malice/docs/)
 
 Malice Documentation
+
+![screen-shot](static/images/screen-shot.png)
