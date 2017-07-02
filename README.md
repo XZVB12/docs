@@ -8,3 +8,5 @@ docs
 Malice Documentation
 
 ![screen-shot](static/images/screen-shot.png)
+
+> Uses [Hugo](https://gohugo.io) theme [Material Docs](https://github.com/digitalcraftsman/hugo-material-docs)
