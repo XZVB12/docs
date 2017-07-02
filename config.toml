@@ -39,9 +39,9 @@ googleAnalytics = ""
 
 
 [social]
-	twitter = ""
+	twitter = "maliceio"
 	github  = "blacktop"
-	email   = ""
+	email   = "support@malice.io"
 
 
 [[menu.main]]
