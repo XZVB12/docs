@@ -1,3 +1,83 @@
-baseURL = "https://malice.io/"
+baseurl = "http://malice.io/"
 languageCode = "en-us"
-title = "MaliceIO"
+title = "Malice Docs"
+metadataformat = "yaml"
+canonifyurls = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = ""
+
+[params]
+	# General information
+	author = "blacktop"
+	description = "Malice Documentation"
+	copyright = "Released under the Apache 2.0 license"
+
+	# Repository
+	provider = "GitHub"
+	repo_url = "https://github.com/maliceio/malice"
+
+	version = "0.3.8"
+	logo = "images/logo.png"
+	favicon = ""
+
+	permalink = "#"
+
+	# Custom assets
+	custom_css = []
+	custom_js  = []
+
+	# Syntax highlighting theme
+	highlight_css  = ""
+
+	[params.palette]
+    	primary = "deep-orange"
+    	accent  = "orange"
+
+    [params.font]
+		  text = "Roboto"
+		  code = "Roboto Mono"
+
+
+[social]
+	twitter = ""
+	github  = "blacktop"
+	email   = ""
+
+
+[[menu.main]]
+	name   = "Malice"
+	url    = "/"
+	weight = 0
+	pre    = ""
+
+[[menu.main]]
+	name   = "Getting started"
+	url    = "getting-started/"
+	weight = 10
+
+[[menu.main]]
+	name   = "Scanning Malware"
+	url    = "scanning-malware/"
+	weight = 20
+
+[[menu.main]]
+	name   = "Plugins"
+	url    = "plugins/"
+	weight = 30
+
+[[menu.main]]
+	name   = "Configuration"
+	url    = "configuration/"
+	weight = 40
+
+[[menu.main]]
+	name   = "License"
+	url    = "license/"
+	weight = 50
+
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true

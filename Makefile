@@ -18,8 +18,8 @@ tar:
 	docker save $(ORG)/$(NAME):$(VERSION) -o $(NAME).tar
 
 test:
+	docker --init run --rm -p 80:80 $(ORG)/$(NAME):$(VERSION)
 	# docker-compose -f ./docker-compose.ci.yml up -d
-	# docker-compose -f docker-compose.ci.yml run httpie http://engine:3333/login username=admin password=admin
 
 circle:
 	http https://circleci.com/api/v1.1/project/github/${REPO} | jq '.[0].build_num' > .circleci/build_num
@@ -28,7 +28,6 @@ circle:
 
 clean:
 	docker-clean stop
-	docker rmi maliceengine_httpie
 	docker rmi $(ORG)/$(NAME)
 	docker rmi $(ORG)/$(NAME):$(VERSION)
 

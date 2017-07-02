@@ -26,4 +26,6 @@ RUN apk add --no-cache -t .build-deps git \
 # COPY poole-overrides.css themes/hyde-x/static/css/
 COPY entrypoint.sh /
 
+EXPOSE 80 443
+
 ENTRYPOINT /entrypoint.sh

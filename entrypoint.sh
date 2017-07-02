@@ -1,3 +1,3 @@
 #!/bin/sh
 
-hugo server -w -b "https://$BLOG_URL" --bind="0.0.0.0" -v -p $BLOG_PORT -d /docs
+hugo server -w --bind="0.0.0.0" -v -p 80 -d /docs --theme="$MALICE_DOCS_THEME"

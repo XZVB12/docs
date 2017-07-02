@@ -1,3 +1,12 @@
+---
+date: 2017-07-01T18:48:46-06:00
+title: License
+weight: 40
+---
+
+Copyright (c) 2013-2017 Malice Graphics and Logos <https://github.com/blacktop><br>
+
+```
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -199,3 +208,4 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+```
