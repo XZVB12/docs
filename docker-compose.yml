@@ -5,8 +5,6 @@ services:
     build: .
     image: maliceio/docs:${VERSION:-latest}
     restart: always
-    volumes:
-      - .:/docs  
     ports:
       - '80:80'
     environment:

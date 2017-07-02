@@ -4,7 +4,20 @@ title: Plugins
 weight: 30
 ---
 
-### Plugin List
+## Docker  
+
+All **malice** plugins run in **stand-alone** docker containers, which means they are *safer* that running on the same  
+machine as **malice** runs on **AND** it means that they are designed in a way to stand on their own.  
+
+Meaning, you don't like **malice**, but you love a specific plugin, well you can run just that plugin by it self.
+
+## Install
+
+```bash
+$ malice plugin update
+```
+
+## List
 
 ```bash
 $ malice plugin list --all --detail

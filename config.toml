@@ -71,9 +71,14 @@ googleAnalytics = ""
 	weight = 40
 
 [[menu.main]]
+	name   = "API"
+	url    = "api/"
+	weight = 50
+
+[[menu.main]]
 	name   = "License"
 	url    = "license/"
-	weight = 50
+	weight = 60
 
 
 [blackfriday]

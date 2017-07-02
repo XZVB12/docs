@@ -21,6 +21,9 @@ test:
 	docker --init run --rm -p 80:80 $(ORG)/$(NAME):$(VERSION)
 	# docker-compose -f ./docker-compose.ci.yml up -d
 
+web:
+	@hugo server --theme=hugo-material-docs --buildDrafts
+
 circle:
 	http https://circleci.com/api/v1.1/project/github/${REPO} | jq '.[0].build_num' > .circleci/build_num
 	http "$(shell http https://circleci.com/api/v1.1/project/github/${REPO}/$(shell cat .circleci/build_num)/artifacts${CIRCLE_TOKEN} | jq '.[].url')" > .circleci/SIZE
@@ -31,4 +34,4 @@ clean:
 	docker rmi $(ORG)/$(NAME)
 	docker rmi $(ORG)/$(NAME):$(VERSION)
 
-.PHONY: build size tags test clean circle
+.PHONY: build size tags test clean circle web

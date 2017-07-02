@@ -6,7 +6,7 @@ weight: 40
 
 Copyright (c) 2013-2017 Malice Graphics and Logos <https://github.com/blacktop><br>
 
-```
+```text
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/

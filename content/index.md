@@ -5,7 +5,6 @@ type: index
 weight: 0
 ---
 
-## Malice documentation
 
 ![Malice Logo](/images/malice.png)
 
@@ -21,14 +20,15 @@ $ brew install maliceio/tap/malice
 
 ## Features
 
-- [single binary]({{< relref "getting-started/index.md#changing-the-color-palette" >}}).
+- Single [binary]({{< relref "getting-started/index.md#changing-the-color-palette" >}}).
 
-- [plugins run in docker](http://tutorialzine.com/2015/08/quick-tip-css-only-dropdowns-with-the-checkbox-hack/).
+- [API]({{< relref "api/index.md" >}}) first design.
+
+- Plugins run in [docker]({{< relref "plugins/index.md#docker" >}}).
 
 - Many [database]({{< relref "configuration/index.md#database" >}}) backends to choose from.
 
-- Web application capability on iOS – when the page is saved to the homescreen,
-  it behaves and looks like a native application.
+- Built with **cloud** in mind from day one.
 
 See the [getting started guide]({{< relref "getting-started/index.md" >}}) for instructions how to get
 it up and running.
