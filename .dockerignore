@@ -1,0 +1,11 @@
+# Ignore .git folder
+.git*
+
+.gitignore
+LICENSE
+README.md
+README.md.bu
+Makefile
+VERSION
+public
+themes/hugo-material-docs
