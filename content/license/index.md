@@ -1,7 +1,6 @@
 ---
-date: 2017-07-01T18:48:46-06:00
 title: License
-weight: 40
+weight: 80
 ---
 
 Copyright (c) 2013-2017 Malice Graphics and Logos <https://github.com/blacktop><br>

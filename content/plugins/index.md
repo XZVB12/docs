@@ -1,7 +1,6 @@
 ---
-date: 2017-07-01T20:52:57-06:00
 title: Plugins
-weight: 30
+weight: 40
 ---
 
 ## Docker  
@@ -24,7 +23,7 @@ $ malice plugin list --all --detail
 ```
 
 | Name          | Description                               | Enabled | Image                | Category | Mime                   |
-|---------------|-------------------------------------------|---------|----------------------|----------|------------------------|
+|:--------------|:------------------------------------------|:--------|:---------------------|:---------|:-----------------------|
 | nsrl          | NSRL Database Hash Search                 | true    | malice/nsrl          | intel    | hash                   |
 | virustotal    | VirusTotal - files scan and hash lookup   | true    | malice/virustotal    | intel    | hash                   |
 | totalhash     | #totalhash - hash lookup                  | true    | malice/totalhash     | intel    | hash                   |

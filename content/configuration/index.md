@@ -1,7 +1,6 @@
 ---
 title: "Configuration"
-date: 2017-07-01T21:40:14-06:00
-weight: 40
+weight: 50
 ---
 
 ## Database

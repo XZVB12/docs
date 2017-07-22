@@ -1,7 +1,6 @@
 ---
-date: 2017-07-01T22:06:37-06:00
 title: API
-weight: 30
+weight: 60
 ---
 
 The Malice HTTP API gives you full access to Malice via HTTP. Every aspect of Malice can be controlled via this API. The Malice CLI uses the HTTP API to access Malice.

@@ -51,34 +51,39 @@ googleAnalytics = ""
 	pre    = ""
 
 [[menu.main]]
-	name   = "Getting started"
+	name   = "Getting Started"
 	url    = "getting-started/"
-	weight = 10
+	weight = 20
 
 [[menu.main]]
 	name   = "Scanning Malware"
 	url    = "scanning-malware/"
-	weight = 20
+	weight = 30
 
 [[menu.main]]
 	name   = "Plugins"
 	url    = "plugins/"
-	weight = 30
+	weight = 40
 
 [[menu.main]]
 	name   = "Configuration"
 	url    = "configuration/"
-	weight = 40
+	weight = 50
 
 [[menu.main]]
 	name   = "API"
 	url    = "api/"
-	weight = 50
+	weight = 60
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "roadmap/"
+	weight = 70
 
 [[menu.main]]
 	name   = "License"
 	url    = "license/"
-	weight = 60
+	weight = 80
 
 
 [blackfriday]

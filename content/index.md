@@ -1,6 +1,5 @@
 ---
-date: 2017-07-01T18:48:46-06:00
-title: Malice documentation
+title: Malice Documentation
 type: index
 weight: 0
 ---
