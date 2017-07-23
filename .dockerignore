@@ -1,7 +1,11 @@
 # Ignore .git folder
 .git*
-
 .gitignore
+
+.circleci*
+docs*
+themes*
+
 LICENSE
 README.md
 README.md.bu
