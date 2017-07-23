@@ -47,7 +47,7 @@ googleAnalytics = ""
 [[menu.main]]
 	name   = "Malice"
 	url    = "/"
-	weight = 0
+	weight = 1
 	pre    = ""
 
 [[menu.main]]

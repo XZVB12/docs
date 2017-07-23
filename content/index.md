@@ -1,7 +1,7 @@
 ---
 title: Malice Documentation
 type: index
-weight: 0
+weight: 1
 ---
 
 
