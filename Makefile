@@ -18,7 +18,7 @@ tar:
 	docker save $(ORG)/$(NAME):$(VERSION) -o $(NAME).tar
 
 test:
-	@open http://127.0.0.1	
+	@open http://127.0.0.1
 	@docker run --init -d -p 80:80 $(ORG)/$(NAME):$(VERSION)
 
 dev:
