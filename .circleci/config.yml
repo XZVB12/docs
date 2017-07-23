@@ -34,11 +34,18 @@ jobs:
             set +o pipefail
             docker load -i /caches/docs.tar | true
       - run:
-          name: Build docslication Docker image
+          name: Build docs Docker image
           command: |
             docker version
             docker build --cache-from=docs -t docs .
             docker image list docs
+      - run:
+          name: Get Docker image size
+          command: |
+            mkdir /tmp/artifacts;
+            docker images --format "{{.Size}}" docs > /tmp/artifacts/size;
+      - store_artifacts:
+          path: /tmp/artifacts
       - run:
           name: Save Docker image layer cache
           command: |

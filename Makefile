@@ -25,14 +25,22 @@ dev:
 	@open http://localhost:1313/
 	@hugo server --theme=hugo-material-docs --buildDrafts
 
-circle:
-	http https://circleci.com/api/v1.1/project/github/${REPO} | jq '.[0].build_num' > .circleci/build_num
-	http "$(shell http https://circleci.com/api/v1.1/project/github/${REPO}/$(shell cat .circleci/build_num)/artifacts${CIRCLE_TOKEN} | jq '.[].url')" > .circleci/SIZE
-	sed -i.bu 's/docker%20image-.*-blue/docker%20image-$(shell cat .circleci/SIZE)-blue/' README.md
+circle: ci-size ## Get docker image size from CircleCI
+	@sed -i.bu 's/docker%20image-.*-blue/docker%20image-$(shell cat .circleci/SIZE)-blue/' README.md
+	@echo "===> Image size is: $(shell cat .circleci/SIZE)"
 
-clean:
+ci-build:
+	@echo "===> Getting CircleCI build number"
+	@http https://circleci.com/api/v1.1/project/github/${REPO} | jq '.[0].build_num' > .circleci/build_num
+
+ci-size: ci-build
+	@echo "===> Getting image build size from CircleCI"
+	http https://circleci.com/api/v1.1/project/github/${REPO}/$(shell cat .circleci/build_num)/artifacts circle-token==${CIRCLE_TOKEN}
+	http "$(shell http https://circleci.com/api/v1.1/project/github/${REPO}/$(shell cat .circleci/build_num)/artifacts circle-token==${CIRCLE_TOKEN} | jq '.[].url')" > .circleci/SIZE
+
+clean: ## Clean docker image and stop all running containers
 	docker-clean stop
-	docker rmi $(ORG)/$(NAME)
-	docker rmi $(ORG)/$(NAME):$(VERSION)
+	docker rmi $(ORG)/$(NAME):$(VERSION) || true
+	docker rmi $(ORG)/$(NAME):node || true
 
 .PHONY: build size tags test clean circle dev
