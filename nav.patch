@@ -1,0 +1,20 @@
+--- themes/hugo-material-docs/layouts/partials/nav.html 2017-01-31 02:23:04.000000000 +0000
++++ layouts/partials/nav.html   2017-01-31 02:24:08.000000000 +0000
+@@ -4,16 +4,14 @@
+
+ {{ $.Scratch.Set "currentMenuEntry" . }}
+ <li>
++  {{ partial "nav_link" $currentNode }}
+   {{ if .HasChildren }}
+-    <span class="section">{{ .Name | title }}</span>
+     <ul>
+       {{ range .Children }}
+         {{ $.Scratch.Set "currentMenuEntry" . }}
+         {{ partial "nav_link" $currentNode }}
+       {{ end }}
+     </ul>
+-  {{ else }}
+-    {{ partial "nav_link" $currentNode }}
+   {{ end }}
+ </li>
+ {{ end }}

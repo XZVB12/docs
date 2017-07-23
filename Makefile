@@ -22,8 +22,8 @@ test:
 	@open http://127.0.0.1
 
 dev:
+	@open http://localhost:1313/
 	@hugo server --theme=hugo-material-docs --buildDrafts
-	@open http://127.0.0.1:1313
 
 circle:
 	http https://circleci.com/api/v1.1/project/github/${REPO} | jq '.[0].build_num' > .circleci/build_num
