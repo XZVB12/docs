@@ -1,4 +1,4 @@
-baseurl = "http://malice.io/"
+baseurl = "https://docs.malice.io/"
 languageCode = "en-us"
 title = "Malice Docs"
 metadataformat = "yaml"
