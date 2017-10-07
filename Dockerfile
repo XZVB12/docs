@@ -1,8 +1,8 @@
 FROM alpine:3.6
 
-volume /var/blog /var/_built
+VOLUME /var/blog /var/_built
 
-ARG VERSION=0.24.1
+ARG VERSION=0.29
 
 RUN apk add --no-cache -t .build-deps curl git mercurial \
   && echo "===> Install Hugo..." \
@@ -15,11 +15,11 @@ RUN apk add --no-cache -t .build-deps curl git mercurial \
 WORKDIR /docs
 
 COPY . .
-RUN apk add --no-cache -t .build-deps git \
+RUN apk add --no-cache git \
   && echo "===> Install hugo-material-docs Theme..." \
   && git clone https://github.com/digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs \
   && rm -rf /tmp/* \
-  && apk del --purge .build-deps
+  && apk del --purge git
 
 # COPY config.templ config.toml
 # COPY hyde-overrides.css themes/hyde-x/static/css/
