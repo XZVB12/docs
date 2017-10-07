@@ -28,7 +28,7 @@ ssh: ## SSH into docker image
 .PHONY: test
 test: stop ## Test hugo docs
 	@open http://127.0.0.1
-	@docker run --init -d --name $(NAME) -p 80:80 $(ORG)/$(NAME):$(VERSION)
+	@docker run --init -d --name $(NAME) -e MALICE_DOCS_PORT=80 -p 80:80 $(ORG)/$(NAME):$(VERSION)
 
 .PHONY: dev
 dev: ## Start dev server
