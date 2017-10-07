@@ -55,5 +55,7 @@ Run 'malice COMMAND --help' for more information on a command.
 
 - Built with **cloud** in mind from day one.
 
+- Built with **security** in mind from day ZERO.
+
 See the [getting started guide]({{< relref "getting-started/index.md" >}}) for instructions how to get
 it up and running.
