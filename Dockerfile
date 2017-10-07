@@ -27,6 +27,6 @@ RUN apk add --no-cache -t .build-deps curl ca-certificates git \
   && rm -rf /tmp/* /docs/themes/hugo-material-docs/.git \
   && apk del --purge .build-deps
 
-EXPOSE 80
+EXPOSE 80 443
 
 ENTRYPOINT /docs/entrypoint.sh
