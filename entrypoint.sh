@@ -4,4 +4,4 @@
 THEME="${MALICE_DOCS_THEME:-hugo-material-docs}"
 BASE_URL="${MALICE_DOCS_URL:-docs.malice.io}"
 
-hugo server -vDEF --watch=false --bind="0.0.0.0" --theme="$THEME" --baseURL="$BASE_URL"
+hugo server -vDEF --watch=false --bind="0.0.0.0" --port=80 --theme="$THEME" --baseURL="$BASE_URL"
