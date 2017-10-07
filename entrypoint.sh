@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # default to `hugo-material-docs` if theme is not supplied
-hugoTheme="${MALICE_DOCS_THEME:-hugo-material-docs}"
+THEME="${MALICE_DOCS_THEME:-hugo-material-docs}"
+BASE_URL="${MALICE_DOCS_URL:-docs.malice.io}"
 
-hugo server -vDEF --watch=false --bind="0.0.0.0" --port=80 --theme="$hugoTheme"
+hugo server -vDEF --watch=false --bind="0.0.0.0" --port=80 --theme="$THEME" --baseURL="$BASE_URL"
