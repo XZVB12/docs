@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://docs.malice.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/scanning-malware/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/plugins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/roadmap/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/license/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/api/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/configuration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/getting-started/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/license/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/plugins/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/roadmap/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/scanning-malware/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.malice.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
