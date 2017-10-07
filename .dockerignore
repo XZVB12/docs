@@ -1,9 +1,11 @@
 # Ignore .git folder
 .git*
 .gitignore
+.DS_Store
 
 .circleci*
 docs*
+public*
 themes*
 
 LICENSE
@@ -11,5 +13,5 @@ README.md
 README.md.bu
 Makefile
 VERSION
-public
-themes/hugo-material-docs
+docker-compose.yml
+nav.patch

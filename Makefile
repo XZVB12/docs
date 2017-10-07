@@ -26,14 +26,18 @@ ssh: ## SSH into docker image
 	@docker run -it --rm -p 3993:3993 -p 9200:9200 --entrypoint=sh $(ORG)/$(NAME):$(VERSION)
 
 .PHONY: test
-test: ## Test hugo docs
+test: stop ## Test hugo docs
 	@open http://127.0.0.1
-	@docker run --init -d -p 80:80 $(ORG)/$(NAME):$(VERSION)
+	@docker run --init -d --name $(NAME) -p 80:80 $(ORG)/$(NAME):$(VERSION)
 
 .PHONY: dev
 dev: ## Start dev server
 	@open http://localhost:1313/
 	@hugo server --theme=hugo-material-docs --buildDrafts
+
+.PHONY: stop
+stop: ## Stop test server
+	@docker rm -f $(NAME) || true
 
 .PHONY: circle ## Get docker image size from CircleCI
 circle:
@@ -53,6 +57,7 @@ clean: ## Clean docker image and stop all running containers
 	docker-clean stop
 	docker rmi $(ORG)/$(NAME):$(VERSION) || true
 	docker rmi $(ORG)/$(NAME):node || true
+	rm -rf public || true
 
 .PHONY: help
 help:

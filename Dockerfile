@@ -1,10 +1,12 @@
 FROM alpine:3.6
 
-VOLUME /var/blog /var/_built
+LABEL maintainer "https://github.com/blacktop"
+
+# VOLUME /var/blog /var/_built
 
 ARG VERSION=0.29
 
-RUN apk add --no-cache -t .build-deps curl git mercurial \
+RUN apk add --no-cache -t .build-deps curl ca-certificates git mercurial \
   && echo "===> Install Hugo..." \
   && curl -sSL https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz \
     | tar -xzf - -C /tmp \
@@ -15,19 +17,16 @@ RUN apk add --no-cache -t .build-deps curl git mercurial \
 WORKDIR /docs
 
 COPY . .
-RUN apk add --no-cache git \
-  && echo "===> Install hugo-material-docs Theme..." \
+RUN apk add --no-cache -t .build-deps curl ca-certificates git \
+  && echo "===> Install hugo-material-docs theme..." \
   && git clone https://github.com/digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs \
   && echo "===> Build website..." \
   && hugo --theme=hugo-material-docs \
-  && rm -rf themes/hugo-material-docs/.git \
-  && apk del --purge git
-
-# COPY config.templ config.toml
-# COPY hyde-overrides.css themes/hyde-x/static/css/
-# COPY poole-overrides.css themes/hyde-x/static/css/
-COPY entrypoint.sh /
+  && rm -rf /docs/themes/hugo-material-docs/exampleSite \
+  && rm -rf /tmp/* /docs/themes/hugo-material-docs/*.md \
+  && rm -rf /tmp/* /docs/themes/hugo-material-docs/.git \
+  && apk del --purge .build-deps
 
 EXPOSE 80 443
 
-ENTRYPOINT /entrypoint.sh
+ENTRYPOINT /docs/entrypoint.sh
