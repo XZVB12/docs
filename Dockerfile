@@ -16,6 +16,8 @@ WORKDIR /docs
 
 COPY . .
 RUN apk add --no-cache git \
+  && echo "===> Build website..." \
+  && hugo \
   && echo "===> Install hugo-material-docs Theme..." \
   && git clone https://github.com/digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs \
   && rm -rf /tmp/* \
